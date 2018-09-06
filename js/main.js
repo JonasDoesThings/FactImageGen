@@ -108,10 +108,14 @@ function drawBG(canvas, context, callback) {
         img.src = event.target.result;
     };
 
-    if (!document.getElementById('bg-image').files[0]) {
-        fetch("img/defaultbg.png").then(res => res.blob().then(blob => reader.readAsDataURL(blob)));
+    if($('#bg-image-url-enable').val()) {
+        fetch($('#bg-image-url').val()).then(res => res.blob().then(blob => reader.readAsDataURL(blob)));
     } else {
-        reader.readAsDataURL(document.getElementById('bg-image').files[0]);
+        if (!document.getElementById('bg-image').files[0]) {
+            fetch("img/defaultbg.png").then(res => res.blob().then(blob => reader.readAsDataURL(blob)));
+        } else {
+            reader.readAsDataURL(document.getElementById('bg-image').files[0]);
+        }
     }
 }
 

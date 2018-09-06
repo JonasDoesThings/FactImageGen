@@ -26,19 +26,21 @@
 
             <hr>
             <b>Background</b>
-            <label for="bg-image">Background Image </label><input type="file" id="bg-image"><br>
+            <label for="bg-image-url-enable">Load from URL </label><input type="checkbox" id="bg-image-url-enable" checked>
+            <label for="bg-image">Background Image URL </label><input type="url" id="bg-image-url" value="https://i.imgur.com/2iim84u.png"><br>
+            <label for="bg-image">Background Image </label><input type="file" id="bg-image" accept="image/*"><br>
             <label for="bg-scale">Background Scale </label><input type="number" id="bg-scale" value="100"><br>
             <label for="bg-blur">Background Blur Radius </label><input type="number" id="bg-blur" value="5"><br>
 
             <hr>
             <b>Watermark</b>
-            <label for="watermark-image">Watermark Image </label><input type="file" id="watermark-image"><br>
+            <label for="watermark-image">Watermark Image </label><input type="file" id="watermark-image" accept="image/*"><br>
             <label for="watermark-margin-y">Watermark Y Bottom Margin </label><input type="number" id="watermark-margin-y" value="100"><br>
             <label for="watermark-scale">Watermark Scale </label><input type="number" id="watermark-scale" value="100">
 
             <hr>
             <b>Logo</b>
-            <label for="logo-image">logo Image </label><input type="file" id="logo-image"><br>
+            <label for="logo-image">logo Image </label><input type="file" id="logo-image" accept="image/*"><br>
             <label for="logo-position-x">logo X Position </label><input type="number" id="logo-position-x" value="30">
             <label for="logo-position-y">logo Y Position </label><input type="number" id="logo-position-y" value="30"><br>
             <label for="logo-scale">logo Scale </label><input type="number" id="logo-scale" value="45">
