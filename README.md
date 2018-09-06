@@ -1,7 +1,7 @@
 # Fact Image Generator
 FactImageGen is a small web-based tool for creating fact images for Instagram and other social media sites.
 
-##Demo
+## Demo
 A live demo of the latest version in the master branch is hosted on github pages at  
 https://kadse1337.github.io/FactImageGen/
 
