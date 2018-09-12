@@ -1,5 +1,3 @@
-var textObj;
-
 window.onload = function () {
     const canvas = document.getElementById("canv");
     const context = canvas.getContext("2d");
@@ -17,9 +15,8 @@ function redrawCanvas(canvas, context) {
     const width = $('#image-width').val();
     const height = $('#image-height').val();
 
-    canvas.height = height;
     canvas.width = width;
-
+    canvas.height = height;
     canvas.style.letterSpacing = $('#text-offset').val() + "px";
 
     context.textAlign = 'center';
@@ -99,9 +96,10 @@ function drawBG(canvas, context, callback) {
     reader.onload = function (event) {
         let img = new Image();
         img.onload = function () {
-            context.filter = "blur(" + $('#bg-blur').val() + "px)";
+            context.filter =
+                "blur(" + $('#bg-blur').val() + "px) brightness(" + $('#bg-brightness').val() + "%) contrast(" + $('#bg-contrast').val() + "%)";
             drawImageProp(context, img, 0, 0, canvas.width, canvas.height);
-            context.filter = "blur(0px)";
+            context.filter = "blur(0px) brightness(100%) contrast(100%)";
             callback();
         };
 
